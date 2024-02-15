@@ -1,0 +1,6 @@
+[submodule "backend"]
+	path = backend
+	url = https://git.cardiff.ac.uk/c21089970/chatbot-intranet-api.git
+[submodule "frontend"]
+	path = frontend
+	url = https://git.cardiff.ac.uk/c21089970/chatbot-intranet-ui.git
