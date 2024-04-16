@@ -1,0 +1,42 @@
+services:
+  frontend:
+    ports:
+      - "127.0.0.1:3000:3000"
+    restart: unless-stopped
+    build:
+      context: frontend/
+      dockerfile: Dockerfile
+  backend:
+    ports:
+      - "127.0.0.1:8000:8000"
+    restart: unless-stopped
+    build:
+      context: backend/
+      dockerfile: Dockerfile
+    environment:
+      - SECRET_KEY=insert_here
+      - DB_URI=postgres://postgres:postgres@db:5432/postgres
+      - QDRANT_URL=insert_here
+      - QDRANT_API_KEY=insert_here
+      - OTEL_SERVICE_NAME=chatbot-api
+      - OTEL_EXPORTER_OTLP_ENDPOINT=insert_here
+      - OTEL_EXPORTER_OTLP_HEADERS=api-key=insert_here
+      - NEWRELIC_API_KEY=insert_here
+      - NEWRELIC_ACCOUNT_ID=insert_here
+      - OPENAI_API_KEY=insert_here
+      - TOGETHER_API_KEY=insert_here
+      - ANTHROPIC_API_KEY=insert_here
+      - COHERE_API_KEY=insert_here
+      - DEEPGRAM_API_KEY=insert_here
+  db:
+    image: postgres:16
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: postgres
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+
+volumes:
+  postgres-data:
