@@ -26,4 +26,5 @@ Link to the deployed application: https://cu-chatbot.kavin.rocks/
 
 
 ## How to Maintain the Project in the Future
-(Need to complete)
+
+The current setup uses Docker compose files but for ideal production Kubernetes could be used, which involved docker images. (Check that this is correct)
