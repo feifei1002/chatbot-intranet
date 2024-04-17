@@ -6,6 +6,8 @@ services:
     build:
       context: frontend/
       dockerfile: Dockerfile
+    environment:
+      - NUXT_PUBLIC_API_URL=http://127.0.0.1:8000
   backend:
     ports:
       - "127.0.0.1:8000:8000"
@@ -28,6 +30,8 @@ services:
       - ANTHROPIC_API_KEY=insert_here
       - COHERE_API_KEY=insert_here
       - DEEPGRAM_API_KEY=insert_here
+    depends_on:
+      - db
   db:
     image: postgres:16
     restart: unless-stopped
