@@ -1,5 +1,11 @@
 # Cardiff University Chatbot
 
+Main repository: https://git.cardiff.ac.uk/c21089970/chatbot-intranet
+
+Link to the deployed application: https://cu-chatbot.kavin.rocks/
+
+
+
 ## Running the Application
 
 ### In the Frontend
@@ -15,9 +21,6 @@
 - Open a terminal
 - Run ```pip install```
 - Run ```uvicorn main:app --reload```
-
-
-Link to the deployed application: https://cu-chatbot.kavin.rocks/
 
 
 
