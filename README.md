@@ -15,6 +15,8 @@ Link to the deployed application: https://cu-chatbot.kavin.rocks/
 * Cohere
 * Deepgram
 * Newrelic
+#### Prepare a SearXNG instance with JSON format enabled.
+#### Prepare a Qdrant cluser or instance.
 
 ### In the Frontend
 - Clone the repository: https://git.cardiff.ac.uk/c21089970/chatbot-intranet-ui
@@ -25,7 +27,7 @@ Link to the deployed application: https://cu-chatbot.kavin.rocks/
 
 ### In the Backend
 - Clone the repository: https://git.cardiff.ac.uk/c21089970/chatbot-intranet-api
-- Add the api keys to environment variables
+- Add the API keys and instances to environment variables
 - Open a terminal
 - Run ```pip install```
 - Run ```uvicorn main:app --reload```
