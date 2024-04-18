@@ -8,6 +8,14 @@ Link to the deployed application: https://cu-chatbot.kavin.rocks/
 
 ## Running the Application
 
+#### In order to run the application, please prepare the API keys for the following tools:
+* OpenAI
+* TogetherAI
+* ClaudeAI
+* Cohere
+* Deepgram
+* Newrelic
+
 ### In the Frontend
 - Clone the repository: https://git.cardiff.ac.uk/c21089970/chatbot-intranet-ui
 - Install pnpm by opening windows powershell and typing ```iwr https://get.pnpm.io/install.ps1 -useb | iex```
